@@ -31,7 +31,9 @@ function processTemperatureData() {
       output = (value - 273.15) * 1.8 + 32;
     }
     alert(
-      `${LOOKUP_TABLE_UNIT[unitTypeFrom]} ${value} is equal to ${output} ${LOOKUP_TABLE_UNIT[unitTypeTo]}.`
+      `${value} ${LOOKUP_TABLE_UNIT[unitTypeFrom]} is equal to ${Math.round(
+        output
+      )} ${LOOKUP_TABLE_UNIT[unitTypeTo]}.`
     );
   } else {
     alert("Invalid input types!");
